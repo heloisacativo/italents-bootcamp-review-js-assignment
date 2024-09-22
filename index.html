@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <link href="media-queries.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Espaço do Café</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/img-coffee-cat.png" alt="Gato com café"/>
+        <div class="greeting">
+            <h1>Espaço do Café</h1>
+            <h2>Monte seu café</h2>
+        </div>
+    </header>
+    <section id="modalHidden" class="modalHidden">
+        <div class="formCoffeDetails">  
+        <form>
+            <button class="buttonBack" id="buttonBack">Voltar</button>
+            <label class="titleLabel">Monte seu café perfeito</label>
+            <p class="paragraphAttention">Essa opção precisa ser consumida no estabelecimento</p>
+            <label>Nome</label>
+            <input id="idName" placeholder="Digite seu nome"></input>
+            <label>Selecione o tamanho</label>
+            <div class="coffeeOptions">
+                <div>
+                    <input type="radio" id="coffeeIced" name="coffeeSize" value="">
+                    <label for="coffeeIced">
+                        <img src="./assets/img-normal-coffee-option-1.png" alt="Pequeno" class="coffeeImage">
+                    </label>
+                    <p>Café Gelado Iced</p>
+                </div>
+                <div>
+                    <input type="radio" id="coffeeSnack" name="coffeeSize" value="Café com Biscoito">
+                    <label for="coffeeSnack">
+                        <img src="./assets/img-normal-coffee-option-2.png" alt="Médio" class="coffeeImage">
+                    </label>
+                    <p>Café com Biscoito</p>
+                </div>
+                <div>
+                    <input type="radio" id="coffeeViena" name="coffeeSize" value="Café Viena">
+                    <label for="coffeeViena">
+                        <img src="./assets/img-normal-coffee-option-3.png" alt="Grande" class="coffeeImage">
+                    </label>
+                    <p>Café Viena</p>
+                </div>
+            </div>
+            <label>Selecione complementos</label>
+            <div class="coffeeOptionsAddon">
+                <div>
+                    <input type="checkbox" id="vanilla" name="coffeeAddon" value="Creme de Baunilha">
+                    <label for="vanilla">
+                        <img src="./assets/img-vanilla-cream.png" alt="Pequeno" class="coffeeImageAdd">
+                        
+                    </label>
+                    <p>Creme de Baunilha</p>
+                </div>
+                <div>
+                    <input type="checkbox" id="nutmeg" name="coffeeAddon" value="Noz Moscadas">
+                    <label for="nutmeg">
+                        <img src="./assets/img-nutmeg.png" alt="Médio" class="coffeeImageAdd">
+                    </label>
+                    <p>Noz Moscadas</p>
+                </div>
+                <div>
+                    <input type="checkbox" id="cinnamon" name="coffeeAddon" value="Canela">
+                    <label for="cinnamon">
+                        <img src="./assets/img-cinnamon.png" alt="Grande" class="coffeeImageAdd">
+                    </label>
+                    <p>Canela</p>
+                </div>
+            </div>         
+            <div class="buttonContainer">
+                <button class="buttonContinue" id="buttonContinue">Continue</button>
+                <button class="buttonBack">Voltar</button>
+            </div>
+        </form>
+        </div>
+    </section>
+    <div class="descriptionContainer" id="descriptionContainer">
+        <div class="description">
+        <h1>Seu nome: <span id="nameChoose"></span></h1>
+        <h2>Tipo: <span id="typeChoose"></span></h2>
+        <h2>Complementos: <span id="addonChoose"></span></h2>
+        </div>
+    </div>
+    <!-- // opcao do café copo -->
+    <section id="modalHiddenCoffeeExpresso" class="modalHiddenCoffeeExpresso">
+        <div class="formCoffeDetails">
+        <form>
+            <button class="buttonBack" id="buttonBack">Voltar</button>
+            <label class="titleLabel">Monte seu café perfeito</label>
+            <label>Nome</label>
+            <input placeholder="Digite seu nome"></input>
+            <label>Selecione o tamanho</label>
+            <div class="coffeeOptions">
+                <div>
+                    <input type="radio" id="small" name="coffeeSize" value="Pequeno">
+                    <label for="small">
+                        <img src="./assets/img-sm-coffee.png" alt="Pequeno" class="coffeeImage">           
+                    </label>
+                    <p>Pequeno</p>
+                </div>
+                <div>
+                    <input type="radio" id="medium" name="coffeeSize" value="Médio">
+                    <label for="medium">
+                        <img src="./assets/img-xl-coffee.png" alt="Médio" class="coffeeImage">
+                    </label>
+                    <p>Médio</p>
+                </div>
+                <div>
+                    <input type="radio" id="large" name="coffeeSize" value="Grande">
+                    <label for="large">
+                        <img src="./assets//img-l-coffee.png" alt="Grande" class="coffeeImage">
+                    </label>
+                    <p>Grande</p>
+                </div>
+            </div>       
+                <label>Selecione o tipo</label>
+                <div class="selectTypeCoffeeCup">
+                    <div>
+                        <input type="radio" id="icedMocha" name="coffeeAddon" value="Iced Mocha">
+                        <label for="icedMocha">
+                            <img src="./assets/img-coffee-cup-option-1.png" alt="Pequeno" class="coffeeTypeCoffeeCupImage">
+                            
+                        </label>
+                        <p>Café Mocha Gelado</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="nutmegCup" name="coffeeAddon" value="Noz Moscada">
+                        <label for="nutmegCup">
+                            <img src="./assets/img-coffee-cup-option-2.png" alt="Médio" class="coffeeTypeCoffeeCupImage">
+                        </label>
+                        <p>Noz Moscadas</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="cinnamonCup" name="coffeeAddon" value="Canela">
+                        <label for="cinnamonCup">
+                            <img src="./assets/img-coffee-cup-option-3.png" alt="Grande" class="coffeeTypeCoffeeCupImage">
+                        </label>
+                        <p>Canela</p>
+                    </div>
+                </div>  
+                <div class="labelRadio">
+                    <label class="customRadio">
+                      <input type="radio" name="order-type" value="local" checked>
+                      <span class="customRadioButton"></span>
+                      Consumir no estabelecimento
+                    </label>
+                    <label class="customRadio">
+                      <input type="radio" name="order-type" value="takeaway">
+                      <span class="customRadioButton"></span>
+                      Para viagem
+                    </label>
+                  </div>
+                <div class="buttonContainer">
+                    <button class="buttonContinue" id="buttonContinueCoffeeCup">Continue</button>
+                    <button class="buttonBack">Voltar</button>
+                </div>
+        </form>
+        </div>
+    </section>
+    <div class="descriptionContainerCoffeeCup" id="descriptionContainerCoffeeCup">
+        <div class="descriptionCoffeeCup">
+        <h1>Seu nome: <span id="nameChoose"></span></h1>
+        <h2>Tamanho: <span id="sizeChoose"></span></h2>
+        <h2>Tipo: <span id="typeChoose"></span></h2>
+        </div>
+    </div>
+    <h1 class="h1Body">Escolha aqui sua melhor opção</h1>
+    <div class="cardContainer">
+        <div class="card">
+        <div class="optionCup" id="optionCup">
+            <img src="./assets/main-option1-img.png" alt="Imagem da Opção 1"/>
+            <h1>Copo</h1>
+        </div>
+
+    </div>
+        <div class="card">
+        <div class="optionCoffeeNormal" id="optionCoffeeNormal">
+            <img src="./assets/main-option2-img.png" alt="Imagem da Opção 2"/>
+            <h1>Normal</h1>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./getCoffeeDescription/getCoffee.js"></script>
+</body>
+</html>
