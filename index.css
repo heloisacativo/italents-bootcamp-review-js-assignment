@@ -1,0 +1,413 @@
+.modalHidden{
+    display: none;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+    filter: blur(10px);
+    z-index: 1; 
+    transition: display 0.3s ease; 
+}
+
+.overlay.show {
+    display: block;
+}
+
+header h1 {
+    color: #503F37;
+    font-family: "Poppins", sans-serif;
+
+}
+
+header h2{
+    color: #5c3e1b;
+    margin-top: -0.9rem;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    margin-left: 2rem;
+    display: flex;
+}
+
+header img {
+    width: 10%;
+}
+
+body {
+    background-color: #857e76;
+}
+
+.h1Body {
+    margin-top: 0.5rem;
+    margin-left: 5rem;
+    font-size: 40px;
+    color: #5c3e1b;
+    font-family: "Poppins", sans-serif;
+}
+
+.cardContainer {
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 2px;
+}
+
+.card {
+    background-color: #61563f;
+    display: flex;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-radius: 1rem;
+    text-align: center;
+    color:#e2d8ba;
+}
+
+.card h1{
+    margin-top: 0rem;
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+.formCoffeDetails .buttonBack {
+    display: flex;
+    justify-content: start;
+    width: 9%;
+    background-color: rgb(185, 179, 159);
+}
+
+.formCoffeDetails {
+    display: flex;
+    background-color: rgb(207, 184, 184);
+    margin-left: 29rem;
+    margin-right: 20rem;
+    margin-top: -11rem;
+    z-index: 2;
+    position: fixed;
+    width: 50%;
+    background-color: #503F37;
+    border-radius: 1rem;
+    padding-top: 1rem;
+}
+
+.formCoffeDetails form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 5rem; 
+    width: 100%; 
+    margin-left: 2rem;
+    font-size: 25px; 
+    color: bisque;
+    font-family: "Poppins", sans-serif;
+}
+
+.titleLabel{
+    font-size: 45px;
+    color: #c99a64;
+}
+
+.paragraphAttention{
+    color: rgba(216, 62, 62, 0.747);
+    margin-top: -1rem;
+}
+
+.formCoffeDetails input {
+    border: none;
+    width: 50%;
+	height: 1rem;
+	font-size: 1.0625rem;
+	padding-left: 0.175rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+    border-bottom: 0.125rem solid rgba(46, 33, 14, 0.6);
+    background-color: rgba(66, 52, 29, 0.63);
+    border-radius: 3px;
+}
+
+input::placeholder {
+    color: #c5bfad; 
+    opacity: 1; 
+}
+
+.formCoffeDetails input:focus{
+    outline: none;
+}
+
+.selectChooseCoffee:focus {
+    border-color: #ff7300;
+    outline: none;
+}
+
+/* // coffeeOptions */
+
+.coffeeOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+.coffeeOptions div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coffeeOptions input[type="radio"] {
+    display: none;
+}
+
+.coffeeOptions label {
+    cursor: pointer; 
+}
+
+.coffeeOptions p{
+    font-size: 18px;
+    margin-top: -0.2rem;
+}
+
+.coffeeOptions .coffeeImage {
+    width: 100px; 
+    height: auto;
+    border: 2px solid transparent; 
+    transition: border 0.3s ease;
+    background-color: rgba(117, 93, 66, 0.6);
+    border-radius: 10px;
+}
+
+input[type="radio"]:checked + label .coffeeImage {
+    border: 2px solid rgba(219, 219, 211, 0.6);
+    border-radius: 10px;
+}
+
+.coffeeOptionsAddon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.coffeeOptionsAddon div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coffeeOptionsAddon input[type="radio"] {
+    display: none;
+}
+
+.coffeeOptionsAddon label {
+    cursor: pointer; 
+}
+
+.coffeeOptionsAddon p{
+    font-size: 18px;
+    margin-top: -0.2rem;
+}
+
+.coffeeOptionsAddon .coffeeImageAdd {
+     width: 100px; 
+    height: auto;
+    border: 2px solid transparent; 
+    transition: border 0.3s ease;
+    background-color: rgba(117, 93, 66, 0.6);
+    border-radius: 10px;
+}
+
+.coffeeOptionsAddon input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label .coffeeImageAdd {
+    border: 2px solid rgba(219, 219, 211, 0.6);
+    border-radius: 10px;
+}
+
+.modalHiddenCoffeeExpresso {
+    display: none;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.buttonContinue {
+  background-color: #867955; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+.buttonBack {
+  background-color: #d3cdbf; 
+  color: rgb(49, 49, 27); 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s; 
+  margin-left: 0.5rem;
+}
+
+.labelRadio {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .customRadio input[type="radio"] {
+    display: none;
+  }
+
+  .customRadio .customRadioButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    border: 2px solid #585036;
+    background-color: white; 
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  
+  .customRadio input[type="radio"]:checked + .customRadioButton {
+    background-color: #4b3c1b;
+    border-color: #8a8954; 
+  }
+  
+  .customRadio input[type="radio"]:checked + .customRadioButton::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: rgb(192, 192, 185); /* Cor do ponto interno */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .selectTypeCoffeeCup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.selectTypeCoffeeCup div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectTypeCoffeeCup input[type="radio"] {
+    display: none;
+}
+
+.selectTypeCoffeeCup label {
+    cursor: pointer; 
+}
+
+.selectTypeCoffeeCup p{
+    font-size: 18px;
+    margin-top: -0.2rem;
+}
+
+.selectTypeCoffeeCup .coffeeTypeCoffeeCupImage {
+    width: 100px; 
+    height: auto;
+    border: 2px solid transparent; 
+    transition: border 0.3s ease;
+    background-color: rgba(117, 93, 66, 0.6);
+    border-radius: 10px;
+}
+
+input[type="radio"]:checked + label .coffeeTypeCoffeeCupImage {
+    border: 2px solid rgba(219, 219, 211, 0.6);
+    border-radius: 10px;
+}
+
+.descriptionContainer {
+    display: flex;
+    background-color: rgb(207, 184, 184);
+    margin-left: 29rem;
+    margin-right: 20rem;
+    margin-top: -10rem;
+    z-index: 2;
+    position: fixed;
+    width: 50%;
+    background-color: #503F37;
+    border-radius: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.descriptionContainer .description{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 5rem;
+    margin-top: 2rem; 
+    width: 100%; 
+    margin-left: 2rem;
+    font-size: 25px; 
+    color: bisque;
+}
+
+.descriptionContainer {
+    display: none;
+}
+
+.description span {
+    color: rgb(196, 156, 107);
+}
+
+.descriptionContainerCoffeeCup {
+    display: flex;
+    background-color: rgb(207, 184, 184);
+    margin-left: 29rem;
+    margin-right: 20rem;
+    margin-top: -10rem;
+    z-index: 2;
+    position: fixed;
+    width: 50%;
+    background-color: #503F37;
+    border-radius: 1rem;
+}
+
+.descriptionContainerCoffeeCup .descriptionCoffeeCup {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 5rem;
+    margin-top: 2rem; 
+    width: 100%; 
+    margin-left: 2rem;
+    font-size: 25px; 
+    color: bisque;
+}
+
+.descriptionContainerCoffeeCup {
+    display: none;
+}
+
+.descriptionCoffeeCup span {
+    color: rgb(196, 156, 107);
+}
